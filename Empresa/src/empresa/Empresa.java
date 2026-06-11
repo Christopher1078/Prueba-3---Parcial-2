@@ -30,6 +30,31 @@ public class Empresa {
                         double salario=lea.nextDouble();
                         em.addEmployees(nombre, salario);
                         break;
+                    case 2:
+                        em.employeeList();
+                        break;
+                    case 3:
+                        System.out.println("Codigo: ");
+                        int code=lea.nextInt();
+                        System.out.println("Monto: ");
+                        double monto=lea.nextDouble();
+                        em.addSaleToEmployee(code, monto);
+                        break;
+                    case 4:
+                        System.out.println("Codigo: ");
+                        code=lea.nextInt();
+                        em.payEmployee(code);
+                        break;
+                    case 5:
+                        System.out.println("Codigo: ");
+                        code=lea.nextInt();
+                        em.fireEmployee(code);
+                        break;
+                    case 6:
+                        System.out.println("Codigo: ");
+                        code=lea.nextInt();
+                        em.printEmployee(code);
+                        break;
                 }
             }while(opcion!=7);
         }catch(IOException e){
