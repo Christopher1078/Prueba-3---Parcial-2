@@ -128,8 +128,10 @@ public class EmpleadoManager {
     }
     
     public void addSaleToEmployee(int code, double monto)throws IOException{
-        if(!isEmployeeActive(code))
+        if(!isEmployeeActive(code)){
+            System.out.println("No se pudo agregar venta");
             return;
+        }
         RandomAccessFile ventas=salesFilefor(code);
         int mes=Calendar.getInstance().get(Calendar.MONTH);
         long pos=mes*9;
